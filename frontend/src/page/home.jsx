@@ -1,11 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 function Portfolio() {
+
+    const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ 
+      ...formData, 
+      [e.target.id]: e.target.value 
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      "myPortfolio2003",      // ← CHANGE THIS
+      "template_rtrj7un",     // ← CHANGE THIS
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "yt16dUm-Plecxm2I_"       // ← CHANGE THIS
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    })
+    .catch((err) => {
+      alert("Failed to send message!");
+      console.error(err);
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0f1724] to-[#071020] text-[#e6eef8] pb-20 ">
       {/* NAVBAR */}
-      <div className="sticky top-0 max-w-full z-10">
-        <div className="backdrop-blur-md bg-white/5 shadow-xl px-5 py-3 text-xl flex items-center justify-between">
+      <div className="sticky top-0 pt-2 max-w-7xl  z-10 items-center mx-auto">
+        <div className="backdrop-blur-md rounded-2xl bg-white/5 shadow-xl px-5 py-3 text-xl flex items-center justify-between">
           <nav className="ml-20 hidden sm:flex items-center gap-20">
               <a
                 href="#home"
@@ -88,6 +128,11 @@ function Portfolio() {
                 <img src="/Livora.jpeg" alt="" className=" rounded-xl w-full object-cover"/>
               </a>
             </div>
+            <div className="rounded-xl hover:scale-105 transition-transform hover:shadow-lg hover:shadow-indigo-500">
+              <a href="https://github.com/MyChesse/SEM-2-project/tree/e623afe35d7f8975e29691ec07b9d59e1084fb50/GK" target="_blank">
+                <img src="/hotel.png" alt="" className=" rounded-xl w-full object-cover"/>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -154,25 +199,44 @@ function Portfolio() {
             </aside>
             
             <div className="text-2xl">
-              <form className="grid gap-3 ">
-                  <div className="flex flex-col">
-                    <label className="">Your Name</label>
-                    <input
-                      type="text"
-                      className="bg-[#1e293b] p-5 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"/>
-                  </div>
-                  <div className="flex flex-col">
-                    <label className="">Your Email</label>  
-                    <input 
-                      type="email"
-                      className="bg-[#1e293b] p-5 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"/>
-                  </div>
-                  <div className="flex flex-col">
-                    <label className="">Message</label>
-                    <textarea 
-                      rows="5"
-                      className="bg-[#1e293b] p-2 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"></textarea>
-                  </div>
+             <form onSubmit={handleSubmit} className="grid gap-3 ">
+                
+                <div className="flex flex-col">
+                  <label>Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="enter your name"
+                    className="bg-[#1e293b] p-5 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <label>Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="enter your email"
+                    className="bg-[#1e293b] p-5 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"
+                  />
+                </div>
+
+                <div className="flex flex-col">
+                  <label>Message</label>
+                  <textarea
+                    id="message"
+                    rows="5"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="enter your message"
+                    className="bg-[#1e293b] p-2 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"
+                  ></textarea>
+                </div>
+
                 <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-2 rounded-lg font-bold mt-5 hover:scale-105 transition-transform">
                   Send
                 </button>
@@ -180,7 +244,6 @@ function Portfolio() {
             </div>
           </div>
         </section>
-
         <footer className="text-center text-slate-500 mt-10">
           © {new Date().getFullYear()} Your Name — Built with care.
         </footer>
