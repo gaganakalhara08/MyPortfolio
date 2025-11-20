@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
 
 function Portfolio() {
 
@@ -32,11 +33,11 @@ function Portfolio() {
       "yt16dUm-Plecxm2I_"       // ← CHANGE THIS
     )
     .then(() => {
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     })
     .catch((err) => {
-      alert("Failed to send message!");
+      toast.error("Failed to send message!");
       console.error(err);
     });
   };
