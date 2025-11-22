@@ -3,9 +3,9 @@ import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 import ScrollAnimation from "../components/scrollAnimation";
 import { fadeUp, fadeLeft, scaleIn} from "../util/animation";
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, FaPython, FaJava} from "react-icons/fa";
 /* import { FaFacebook, FaInstagram, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa"; */
-import { SiTailwindcss, SiJavascript, SiExpress, SiMongodb, SiFigma } from "react-icons/si";
+import { SiTailwindcss, SiExpress, SiMongodb, SiFigma } from "react-icons/si";
 
 
 function Portfolio() {
@@ -62,13 +62,14 @@ function Portfolio() {
     { name: "HTML", icon: <FaHtml5 className="text-7xl text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt className=" text-7xl text-blue-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-7xl text-cyan-400" /> },
-    { name: "JavaScript", icon: <SiJavascript className=" text-7xl text-yellow-400" /> },
+    { name: "Java", icon: <FaJava className=" text-7xl text-orange-400" /> },
+    { name: "Python", icon: <FaPython className=" text-7xl text-yellow-600" /> },
     { name: "React", icon: <FaReact className=" text-7xl text-blue-400" /> },
     { name: "Node.js", icon: <FaNodeJs className=" text-7xl text-green-500" /> },
     { name: "Express", icon: <SiExpress className=" text-7xl text-gray-300" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-7xl text-green-500" /> },
     { name: "Figma", icon: <SiFigma className=" text-7xl" /> },
-    { name: "Git", icon: <FaGitAlt className=" text-7xl text-orange-600" /> },
+    { name: "GitHub", icon: <FaGithub className=" text-7xl text-white-600" /> },
   ];
 
   return (
@@ -173,7 +174,7 @@ function Portfolio() {
           <div className="grid md:grid-cols-3 gap-5 place-items-center mt-20">
             <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
               <a href="https://www.figma.com/design/uDQzaCvBLnq9CuiFqL0Y3U/Fitness-app-UI?node-id=0-1&t=7K7vLm2k5WJeNH1b-1" target="_blank">
-                <img src="/fitness.png" alt="" className=" rounded-xl w-full object-cover"/>
+                <img src="/fitnessApp.png" alt="" className=" rounded-xl w-full object-cover"/>
               </a>
             </div>
             <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
