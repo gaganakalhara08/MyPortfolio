@@ -5,7 +5,7 @@ import ScrollAnimation from "../components/scrollAnimation";
 import { fadeUp, fadeLeft, scaleIn} from "../util/animation";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGithub, FaPython, FaJava} from "react-icons/fa";
 /* import { FaFacebook, FaInstagram, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa"; */
-import { SiTailwindcss, SiExpress, SiMongodb, SiFigma } from "react-icons/si";
+import { SiTailwindcss, SiExpress, SiMongodb, SiFigma, SiPostman } from "react-icons/si";
 
 
 function Portfolio() {
@@ -70,6 +70,7 @@ function Portfolio() {
     { name: "MongoDB", icon: <SiMongodb className="text-7xl text-green-500" /> },
     { name: "Figma", icon: <SiFigma className=" text-7xl" /> },
     { name: "GitHub", icon: <FaGithub className=" text-7xl text-white-600" /> },
+    { name: "Postman", icon: <SiPostman className=" text-7xl text-orange-500" /> },
   ];
 
   return (
@@ -174,27 +175,27 @@ function Portfolio() {
           <div className="grid md:grid-cols-3 gap-5 place-items-center mt-20">
             <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
               <a href="https://www.figma.com/design/uDQzaCvBLnq9CuiFqL0Y3U/Fitness-app-UI?node-id=0-1&t=7K7vLm2k5WJeNH1b-1" target="_blank">
-                <img src="/fitnessApp.png" alt="" className=" rounded-xl w-full object-cover"/>
+                <img src="/fitnessApp.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
               </a>
             </div>
             <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
               <a href="https://www.figma.com/design/JxkcaP2i9ZdSJPhryIMmUh/MobileApp?node-id=0-1&t=Io9uRAOcc7jFXFqS-1" target="_blank">
-                <img src="/healthTracker.png" alt="" className=" rounded-xl w-4xl object-cover"/>
+                <img src="/health.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
               </a>
             </div>
             <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
-              <a href="" target="_blank">
-                <img src="/penguin.png" alt="" className=" rounded-xl w-full object-cover"/>
+              <a href="https://github.com/MyChesse/Year2-Sem1.git" target="_blank">
+                <img src="/penguin.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
               </a>
             </div>
             <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
               <a href="https://github.com/VDewMin/Livora.git" target="_blank">
-                <img src="/Livora.jpeg" alt="" className=" rounded-xl w-full object-cover"/>
+                <img src="/Livora.jpeg" alt="" className=" rounded-xl h-60 w-full object-cover"/>
               </a>
             </div>
             <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
               <a href="https://github.com/MyChesse/SEM-2-project/tree/e623afe35d7f8975e29691ec07b9d59e1084fb50/GK" target="_blank">
-                <img src="/hotel.png" alt="" className=" rounded-xl w-full object-cover"/>
+                <img src="/hotel.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
               </a>
             </div>
           </div>
