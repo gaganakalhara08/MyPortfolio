@@ -122,17 +122,16 @@ function Portfolio() {
         <section id="home" className="pt-24 -mt-24 mb-10">
           {/* Profile Card */}
           <aside className=" p-5 rounded-xl">
-       <div className="w-60 h-60 rounded-full overflow-hidden 
-                transition-transform duration-300 hover:scale-105 
-                border-4 border-white/10 mx-auto mb-4 bg-black">
-                
-  <img
-    src="/profile1.jpeg"
-    alt="Profile"
-    className="w-full object-contain rounded-full"
-  />
-</div>
-
+            <div className="w-60 h-60 rounded-full overflow-hidden 
+                      transition-transform duration-300 hover:scale-105 
+                      border-4 border-white/10 mx-auto mb-4 bg-black">
+                      
+              <img
+                src="/profile1.jpeg"
+                alt="Profile"
+                className="w-full object-contain rounded-full"
+              />
+            </div>
 
             <ScrollAnimation variant={scaleIn}>
             <div className="justify-center flex flex-col md:flex-row font-semibold">
