@@ -74,11 +74,11 @@ function Portfolio() {
   ];
 
   return (
-    <div className="font-poppins min-h-screen bg-gradient-to-b from-[#0f1724] to-[#071020] text-[#e6eef8] pb-20 ">
+    <div className="font-poppins min-h-screen bg-gradient-to-b from-[#0f1724] to-[#071020] text-[#e6eef8] pb-20">
       {/* NAVBAR */}
-      <div className="sticky top-0 pt-2 max-w-7xl  z-10 items-center mx-auto">
+      <div className="sticky top-0 pt-2 max-w-7xl z-10 items-center mx-auto">
         <div className="backdrop-blur rounded-2xl bg-white/5 shadow-xl md:gap-20 px-5 py-3 text-xl flex items-center justify-between">
-          <a href="#"><h1 className="text-3xl font-bold ml-5 bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent">GK</h1></a>
+          <a href="#"><h1 className="text-3xl font-bold ml-5 bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent">GK.</h1></a>
           <nav className="text-white ml-20 hidden sm:flex items-center gap-20 md:gap-30">
               {["Home", "Skills", "Projects", "Follow On"].map((item) => (
               <a
@@ -122,12 +122,18 @@ function Portfolio() {
         <section id="home" className="pt-24 -mt-24 mb-10">
           {/* Profile Card */}
           <aside className=" p-5 rounded-xl">
-            <div className="w-60 h-60 rounded-full transition-transform duration-300  overflow-hidden hover:scale-105 border-4 border-white/5 items-center mx-auto mb-4">
-              <img
-                src="/profile.jpg"
-                className="w-full h-full object-cover"
-              />
-            </div>
+       <div className="w-60 h-60 rounded-full overflow-hidden 
+                transition-transform duration-300 hover:scale-105 
+                border-4 border-white/10 mx-auto mb-4 bg-black">
+                
+  <img
+    src="/profile1.jpeg"
+    alt="Profile"
+    className="w-full object-contain rounded-full"
+  />
+</div>
+
+
             <ScrollAnimation variant={scaleIn}>
             <div className="justify-center flex flex-col md:flex-row font-semibold">
               <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">I'M Gagana Kalhara,  </h1>
@@ -143,7 +149,7 @@ function Portfolio() {
               I'm always excited to learn, experiment, and improve my skills — whether it's coding, UI/UX, problem-solving, or building full-stack applications. My goal is to grow into a skilled IT professional who can contribute to meaningful and innovative tech projects.
             </p>
             <div className="mt-20 hover:scale-105 transition-transform duration-300 hover:text-white">
-              <a href="" target="_blank" className="bg-gradient-to-r from-purple-600 to-indigo-500 text-xl hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 text-white p-3 rounded-md">
+              <a href="https://drive.google.com/file/d/1_HoShV7a2dnpYIGiAGhN31WBxCP78oIm/view?usp=sharing" target="_blank" className="bg-gradient-to-r from-purple-600 to-indigo-500 text-xl hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 text-white p-3 rounded-md">
                 My Resume
               </a>
             </div>
@@ -174,38 +180,132 @@ function Portfolio() {
           <div className="text-center font-semibold">
             <h2 className="text-7xl font-bold">Projects</h2>
           </div>
-        
-          <div className="grid md:grid-cols-3 gap-5 place-items-center mt-20">
-            <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
-              <a href="https://www.figma.com/design/uDQzaCvBLnq9CuiFqL0Y3U/Fitness-app-UI?node-id=0-1&t=7K7vLm2k5WJeNH1b-1" target="_blank">
-                <img src="/fitnessApp.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
-              </a>
+
+          <div className="grid md:grid-cols-2 gap-10 mt-20">
+            <div className="relative rounded-2xl overflow-hidden w-full h-[380px] group">
+              <img
+                src="/fitnessApp.png"
+                alt="Fitness App"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+              <div className="absolute bottom-5 left-5 text-white">
+                <p className="text-sm font-semibold text-yellow-300 tracking-wider">UI / UX DESIGN</p>
+
+                <h3 className="text-2xl font-bold mt-1">Fitness Mobile App</h3>
+
+                <p className="text-sm text-gray-200 mt-2 w-[90%]">
+                  A modern fitness tracking UI design created in Figma with clean layouts.
+                </p>
+
+                <div className="flex gap-2 mt-4">
+                  <a href="https://www.figma.com/design/uDQzaCvBLnq9CuiFqL0Y3U/Fitness-app-UI?node-id=0-1&t=7K7vLm2k5WJeNH1b-1" target="_blank">
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">Figma</span></a>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">UI/UX</span>
+                </div>
+              </div>
             </div>
-            <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
-              <a href="https://www.figma.com/design/JxkcaP2i9ZdSJPhryIMmUh/MobileApp?node-id=0-1&t=Io9uRAOcc7jFXFqS-1" target="_blank">
-                <img src="/health.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
-              </a>
+
+            <div className="relative rounded-2xl overflow-hidden w-full h-[380px] group">
+              <img
+                src="/health.png"
+                alt="Health App"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <div className="absolute bottom-5 left-5 text-white">
+                <p className="text-sm font-semibold text-yellow-300 tracking-wider">UI / UX DESIGN</p>
+
+                <h3 className="text-2xl font-bold mt-1">Habits Tracking App</h3>
+
+                <p className="text-sm text-gray-200 mt-2 w-[90%]">Mobile UI for Habits tracking and wellness features with a clean look.</p>
+
+                <div className="flex gap-2 mt-4">
+                   <a href="https://www.figma.com/design/JxkcaP2i9ZdSJPhryIMmUh/MobileApp?node-id=0-1&t=Io9uRAOcc7jFXFqS-1" target="_blank">
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">Figma</span></a>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">Design</span>
+                </div>
+              </div>
             </div>
-            <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
-              <a href="https://github.com/MyChesse/Year2-Sem1.git" target="_blank">
-                <img src="/penguin.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
-              </a>
+
+            <div className="relative rounded-2xl overflow-hidden w-full h-[380px] group">
+              <img
+                src="/penguin.png"
+                alt="C Project"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+              <div className="absolute bottom-5 left-5 text-white">
+                <p className="text-sm font-semibold text-yellow-300 tracking-wider">ACADEMIC PROJECT</p>
+
+                <h3 className="text-2xl font-bold mt-1">Penguin - Online Exam Management</h3>
+
+                <p className="text-sm text-gray-200 mt-2 w-[90%]">Contributed to the development of a web-based exam management system.</p>
+
+                <div className="flex gap-2 mt-4">
+                  <a
+                    href="https://github.com/MyChesse/Year2-Sem1.git" target="_blank">     
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">GitHub</span></a>
+
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">Java</span>
+                </div>
+              </div>
             </div>
-            <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
-              <a href="https://github.com/VDewMin/Livora.git" target="_blank">
-                <img src="/Livora.jpeg" alt="" className=" rounded-xl h-60 w-full object-cover"/>
-              </a>
+
+            <div className="relative rounded-2xl overflow-hidden w-full h-[380px] group">
+              <img
+                src="/Livora.jpeg"
+                alt="Livora App"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+              <div className="absolute bottom-5 left-5 text-white">
+                <p className="text-sm font-semibold text-yellow-300 tracking-wider">ACADEMIC PROJECT</p>
+
+                <h3 className="text-2xl font-bold mt-1">Livora - Smart Resident Management</h3>
+
+                <p className="text-sm text-gray-200 mt-2 w-[90%]">A smart Resident management system with modern UI and device controls.</p>
+
+                <div className="flex gap-2 mt-4">
+                  <a href="https://github.com/VDewMin/Livora.git" target="_blank">
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">GitHub</span></a>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">React</span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">Node</span>
+                </div>
+              </div>
             </div>
-            <div className="rounded-xl hover:scale-105 transition-transform duration-300 hover:shadow-lg hover:shadow-indigo-500">
-              <a href="https://github.com/MyChesse/SEM-2-project/tree/e623afe35d7f8975e29691ec07b9d59e1084fb50/GK" target="_blank">
-                <img src="/hotel.png" alt="" className=" rounded-xl h-60 w-full object-cover"/>
-              </a>
+
+            <div className="relative rounded-2xl overflow-hidden w-full h-[380px] group">
+              <img
+                src="/hotel.png"
+                alt="Hotel Management"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+              <div className="absolute bottom-5 left-5 text-white">
+                <p className="text-sm font-semibold text-yellow-300 tracking-wider">ACADEMIC PROJECT</p>
+
+                <h3 className="text-2xl font-bold mt-1">Hotel Management System</h3>
+
+                <p className="text-sm text-gray-200 mt-2 w-[90%]">Full CRUD hotel management system built for academic coursework.</p>
+
+                <div className="flex gap-2 mt-4">
+                  <a href="https://github.com/MyChesse/SEM-2-project/tree/e623afe35d7f8975e29691ec07b9d59e1084fb50/GK" target="_blank">
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">GitHub</span></a>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">HTML</span>
+                  <span className="px-3 py-1 bg-white/20 rounded-full text-xs backdrop-blur-sm">PHP</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
         </ScrollAnimation> 
 
-        {/* follow on */}
+        {/* FOLLOW ON */}
         <ScrollAnimation variant={fadeUp}> 
         <section id="follow-on" className="mt-20 pt-24 -mt-24 mb-10">
           <div className="text-center font-semibold">
@@ -252,7 +352,7 @@ function Portfolio() {
 
           <div className="grid md:grid-cols-2 text-white gap-5 mt-20 font-semibold">
             <ScrollAnimation variant={fadeLeft}>
-            <aside className="">
+            <section className="">
               <h3 className="font-bold text-5xl bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent mb-10">Quick details</h3>
               <div className="">
                 <div className="flex justify-start gap-5 mb-5">
@@ -268,7 +368,7 @@ function Portfolio() {
                   <div className="text-2xl text-white p-3">No-175/2, Indolamulla, Dompe, Sri Lanka</div>
                 </div>
               </div>
-            </aside>
+            </section>
             </ScrollAnimation>
             
             <div className="text-2xl">
