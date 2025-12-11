@@ -346,70 +346,102 @@ function Portfolio() {
         </ScrollAnimation>
 
         {/* CONTACT */}
-        <section id="contact-with-me" className="mt-10 pt-24 -mt-24 mb-10">
-          <h2 className="text-7xl font-bold text-center">Get In Touch</h2>
+        <section
+          id="contact-with-me"
+          className="w-full mt-10 pt-24 -mt-24 mb-10"
+        >
+          <h2 className="text-7xl md:text-7xl font-bold text-center">
+            Get In Touch
+          </h2>
 
-          <div className="grid md:grid-cols-2 text-white gap-5 mt-20 font-semibold">
+          <div className="grid md:grid-cols-2 text-white gap-10 mt-14 font-semibold">
             <ScrollAnimation variant={fadeLeft}>
-            <section className="">
-              <h3 className="font-bold text-5xl bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent mb-10">Quick details</h3>
-              <div className="">
-                <div className="flex justify-start gap-5 mb-5">
-                  <img src="/email.png" alt="Email" className="w-14 h-14 rounded-xl"/>
-                  <div className="text-2xl text-white p-3">ggaganakalhara08@gmail.com</div>
+              <section>
+                <h3 className="font-bold text-5xl sm:text-4xl md:text-5xl bg-gradient-to-r
+                  from-purple-600 to-blue-500 bg-clip-text text-transparent mb-8 sm:mb-10">
+                  Quick details
+                </h3>
+
+                <div className="flex items-center gap-4 sm:gap-5 mb-6">
+                  <img
+                    src="/email.png"
+                    alt="Email"
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl"
+                  />
+                  <div className="text-base sm:text-xl md:text-2xl">
+                    ggaganakalhara08@gmail.com
+                  </div>
                 </div>
-                <div className="flex justify-start gap-5 mb-5">
-                  <img src="/phone.png" alt="Phone" className="w-14 h-14 rounded-xl"/>
-                  <div className="text-2xl text-white p-3">+94729305264</div>
+
+                <div className="flex items-center gap-4 sm:gap-5 mb-6">
+                  <img
+                    src="/phone.png"
+                    alt="Phone"
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl"
+                  />
+                  <div className="text-base sm:text-xl md:text-2xl">
+                    +94729305264
+                  </div>
                 </div>
-                <div className="flex justify-start gap-5 mb-5">
-                  <img src="/location.png" alt="Location" className="w-14 h-14 rounded-xl"/>
-                  <div className="text-2xl text-white p-3">No-175/2, Indolamulla, Dompe, Sri Lanka</div>
+
+                <div className="flex items-center gap-4 sm:gap-5 mb-6">
+                  <img
+                    src="/location.png"
+                    alt="Location"
+                    className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl"
+                  />
+                  <div className="text-base sm:text-xl md:text-2xl">
+                    No-175/2, Indolamulla, Dompe, Sri Lanka
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
             </ScrollAnimation>
-            
-            <div className="text-2xl">
-             <form onSubmit={handleSubmit} className="grid gap-3 ">
-                
+
+            {/* CONTACT FORM */}
+            <div className="text-lg sm:text-xl md:text-2xl">
+              <form onSubmit={handleSubmit} className="grid gap-5">
+
                 <div className="flex flex-col">
-                  <label>Your Name</label>
+                  <label className="text-base sm:text-lg md:text-xl">Your Name</label>
                   <input
                     type="text"
                     id="name"
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="enter your name"
-                    className="bg-[#1e293b] p-5 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"
+                    className="bg-[#1e293b] p-4 sm:p-5 mt-3 rounded-lg"
                   />
                 </div>
 
                 <div className="flex flex-col">
-                  <label>Your Email</label>
+                  <label className="text-base sm:text-lg md:text-xl">Your Email</label>
                   <input
                     type="email"
                     id="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="enter your email"
-                    className="bg-[#1e293b] p-5 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"
+                    className="bg-[#1e293b] p-4 sm:p-5 mt-3 rounded-lg"
                   />
                 </div>
 
                 <div className="flex flex-col">
-                  <label>Message</label>
+                  <label className="text-base sm:text-lg md:text-xl">Message</label>
                   <textarea
                     id="message"
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="enter your message"
-                    className="bg-[#1e293b] p-2 mt-5 rounded-lg border border-slate-700 focus:outline-none focus:border-purple-600"
+                    className="bg-[#1e293b] p-3 sm:p-4 mt-3 rounded-lg"
                   ></textarea>
                 </div>
 
-                <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-2 rounded-lg font-bold mt-5 hover:scale-105 transition-transform">
+                <button
+                  className="bg-gradient-to-r from-purple-600 to-indigo-600 
+                  text-white p-3 rounded-lg font-bold mt-4 hover:scale-105 
+                  transition-transform"
+                >
                   Send
                 </button>
               </form>
