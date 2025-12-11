@@ -74,7 +74,7 @@ function Portfolio() {
   ];
 
   return (
-    <div className="font-poppins min-h-screen bg-gradient-to-b from-[#0f1724] to-[#071020] text-[#e6eef8] pb-20">
+    <div className="w-full font-poppins min-h-screen bg-gradient-to-b from-[#0f1724] to-[#071020] text-[#e6eef8] pb-20">
       {/* NAVBAR */}
       <div className="sticky top-0 pt-2 max-w-7xl z-10 items-center mx-auto">
         <div className="backdrop-blur rounded-2xl bg-white/5 shadow-xl md:gap-20 px-5 py-3 text-xl flex items-center justify-between">
@@ -148,7 +148,7 @@ function Portfolio() {
               I'm always excited to learn, experiment, and improve my skills — whether it's coding, UI/UX, problem-solving, or building full-stack applications. My goal is to grow into a skilled IT professional who can contribute to meaningful and innovative tech projects.
             </p>
             <div className="mt-20 hover:scale-105 transition-transform duration-300 hover:text-white">
-              <a href="https://drive.google.com/drive/folders/11paS3g8hR6DrIi8tkiern9MvN97RH-Vb" target="_blank" className="bg-gradient-to-r from-purple-600 to-indigo-500 text-xl hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 text-white p-3 rounded-md">
+              <a href="https://drive.google.com/file/d/15WUb3WUUcoPXq0jeb17oCuKHINCbY6Pg/view?usp=sharing" target="_blank" className="bg-gradient-to-r from-purple-600 to-indigo-500 text-xl hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 text-white p-3 rounded-md">
                 My Resume
               </a>
             </div>
